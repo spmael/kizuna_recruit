@@ -1,0 +1,20 @@
+:root {
+  --bg: #faf9f7;
+  --surface: #ffffff;
+  --text: #0a0a0a;
+  --muted: #57534e;
+  --border: #d6d3d1;
+  --subtle: #f0eeeb;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); }
+.phone-frame { width: 100%; max-width: 375px; margin: 0 auto; min-height: 100vh; background: var(--surface); border-left: 1px solid var(--border); border-right: 1px solid var(--border); padding: 16px; }
+.stack { display: grid; gap: 12px; }
+.field { display: grid; gap: 6px; font-size: 14px; }
+input, select, textarea { width: 100%; border: 1px solid var(--border); padding: 10px; border-radius: 0; }
+.primary { background: #0a0a0a; color: #fff; border: 1px solid #0a0a0a; padding: 12px; width: 100%; }
+.ghost { color: var(--text); text-decoration: underline; display: inline-block; margin-top: 12px; }
+.muted { color: var(--muted); margin-top: -8px; }
+.card { background: var(--subtle); border: 1px solid var(--border); padding: 12px; }
+.error { color: #7f1d1d; }
+.message { border: 1px solid var(--border); padding: 8px; background: #f0fdf4; }

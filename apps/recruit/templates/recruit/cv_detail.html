@@ -1,0 +1,17 @@
+{% extends 'recruit/base.html' %}
+{% block content %}
+<header>
+  <h1>CV enregistré</h1>
+  <p class="muted">Résumé structuré</p>
+</header>
+<section class="card">
+  <p><strong>Nom:</strong> {{ cv.full_name }}</p>
+  <p><strong>Téléphone:</strong> {{ cv.phone_number }}</p>
+  <p><strong>Ville:</strong> {{ cv.city }}</p>
+  <p><strong>Email:</strong> {{ cv.email|default:'-' }}</p>
+  <p><strong>Titre:</strong> {{ cv.headline|default:'-' }}</p>
+  <p><strong>Résumé:</strong> {{ cv.summary|default:'-' }}</p>
+  <p><strong>Compétences:</strong> {% if cv.skills %}{{ cv.skills|join:', ' }}{% else %}-{% endif %}</p>
+</section>
+<a class="ghost" href="/">← Créer un autre CV</a>
+{% endblock %}
