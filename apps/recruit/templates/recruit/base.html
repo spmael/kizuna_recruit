@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mboko Recruit</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'recruit/style.css' %}">
+</head>
+<body>
+  <main class="phone-frame">
+    {% if messages %}
+      <section class="messages">
+      {% for message in messages %}
+        <p class="message">{{ message }}</p>
+      {% endfor %}
+      </section>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
